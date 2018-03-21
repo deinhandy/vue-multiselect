@@ -87,8 +87,7 @@
                 <span
                   v-if="!(option && (option.$isLabel || option.$isDisabled))"
                   :class="optionHighlight(index, option)"
-                  @click.stop="select(option)"
-                  @touchstart.stop.prevent="function() {
+                  @click.stop="function() {
                     pointerSet(index);
                     select(option);
                   }"
